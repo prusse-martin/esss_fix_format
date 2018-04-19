@@ -7,7 +7,12 @@ env:
   - TOXENV=linting
 
 python:
-  - "3.6"
+  - "3.5"
+
+matrix:
+  include:
+    - env: TOXENV=py36
+      python: '3.6'
 
 install:
   - pip install tox
