@@ -3,17 +3,11 @@ sudo: false
 env:
   - TOXENV=py27
   - TOXENV=py35
+  - TOXENV=py36
   - TOXENV=linting
 
 python:
   - "3.5"
-
-matrix:
-  include:
-    - env: TOXENV=py36
-      python: '3.6'
-    - env: TOXENV=py37
-      python: 'nightly'
 
 install:
   - pip install tox
